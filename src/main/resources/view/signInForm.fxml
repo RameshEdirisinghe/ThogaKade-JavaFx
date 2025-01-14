@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.signIn.SignInFormController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/12832208_5088163.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="502.0" layoutY="34.0" prefHeight="35.0" prefWidth="78.0" text="Sign In">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblUserName" layoutX="467.0" layoutY="89.0" promptText="User Name" />
+      <TextField fx:id="lblEmail" layoutX="467.0" layoutY="129.0" promptText="Email" />
+      <TextField fx:id="lblPassword" layoutX="467.0" layoutY="174.0" promptText="Password" />
+      <Button layoutX="515.0" layoutY="243.0" mnemonicParsing="false" onAction="#btnOnActionSignIn" text="Sign in" />
+   </children>
+</AnchorPane>

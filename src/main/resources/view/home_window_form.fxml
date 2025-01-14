@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.item.HomeWindowFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828" height="598.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="215.0" />
+      <Button layoutX="38.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnOnActionCustomerForm" prefHeight="28.0" prefWidth="139.0" text="Customer Form" />
+      <AnchorPane fx:id="DashboardAnchorPane" layoutX="231.0" layoutY="26.0" prefHeight="540.0" prefWidth="819.0" style="-fx-background-color: #757b81;" />
+      <Button layoutX="38.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnOnActionItemForm" prefHeight="28.0" prefWidth="139.0" text="Item Form" />
+      <Button layoutX="38.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnOnActionOrderForm" prefHeight="28.0" prefWidth="139.0" text="Order Form" />
+   </children>
+</AnchorPane>
