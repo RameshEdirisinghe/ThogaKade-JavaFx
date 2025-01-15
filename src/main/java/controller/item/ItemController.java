@@ -64,4 +64,32 @@ public class ItemController implements ItemService {
             throw new IllegalArgumentException(e);
         }
     }
+
+    public List<String> getItemCodes() {
+        try {
+            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT code FROM item");
+            List<String> itemCodes = new ArrayList<>();
+            while (resultSet.next()) {
+                itemCodes.add(resultSet.getString(1));
+            }
+            return itemCodes;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Item searchItem(String id) {
+        try {
+            ResultSet res = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT * FROM item WHERE code = '" + id + "'");
+            res.next();
+            return new Item(
+                    res.getString(1),
+                    res.getString(2),
+                    res.getDouble(3),
+                    res.getInt(4)
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

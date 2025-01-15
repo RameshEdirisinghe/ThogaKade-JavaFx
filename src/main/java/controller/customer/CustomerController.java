@@ -96,5 +96,29 @@ public class CustomerController implements CustomerService {
             throw new RuntimeException(e);
         }
     }
+
+    public List<String> getCustomerIDs() {
+        try {
+            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT id FROM customer");
+            List<String> customerIDs = new ArrayList<>();
+            while (resultSet.next()) {
+                customerIDs.add(resultSet.getString(1));
+            }
+            return customerIDs;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public String getCustomerName(String id) {
+        try {
+            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT name FROM customer WHERE id = '" + id + "'");
+            if (resultSet.next()) {
+                return resultSet.getString(1);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
 

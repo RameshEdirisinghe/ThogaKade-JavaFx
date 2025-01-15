@@ -14,7 +14,7 @@ public class Stater extends Application {
 //        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_customer_view_form.fxml"))));
 //        stage.show();
 
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/loginForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/orderForm.fxml"))));
         stage.show();
     }
 }

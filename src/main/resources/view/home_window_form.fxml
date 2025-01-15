@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="590.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.item.HomeWindowFormController">
+<AnchorPane prefHeight="590.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home.HomeWindowFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828" height="598.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="215.0" />
       <Button layoutX="38.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnOnActionCustomerForm" prefHeight="28.0" prefWidth="139.0" text="Customer Form" />

@@ -1,9 +1,13 @@
 package controller.Order;
 
 import dbconnection.DBConnection;
+import model.Customer;
+import model.Order;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrderControll {
     public static OrderControll Instance;
@@ -11,7 +15,7 @@ public class OrderControll {
 
     }
     public String getOrderId()  {
-        
+
 
         try {
             ResultSet rst = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT id FROM orders ORDER BY id DESC LIMIT 1");
@@ -23,7 +27,10 @@ public class OrderControll {
             throw new RuntimeException(e);
         }
     }
+
     public static OrderControll getInstance(){
         return Instance==null?Instance=new OrderControll():Instance;
     }
+
+
 }

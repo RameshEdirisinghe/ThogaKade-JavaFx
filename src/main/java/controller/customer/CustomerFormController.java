@@ -1,6 +1,5 @@
 package controller.customer;
 
-import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,7 +13,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class AddCustomerFormController implements Initializable {
+public class CustomerFormController implements Initializable {
 
     public TextField txtId;
     public TextField txtName;

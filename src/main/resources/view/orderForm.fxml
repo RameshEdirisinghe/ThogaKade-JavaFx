@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Order.OrderFormControll">
+<AnchorPane prefHeight="566.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Order.OrderFormControll">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="820.0" />
       <Label layoutX="309.0" layoutY="14.0" prefHeight="54.0" prefWidth="202.0" text="Order Form">
@@ -55,13 +55,13 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cmbCusId" layoutX="134.0" layoutY="133.0" prefWidth="150.0" />
-      <Label layoutX="586.0" layoutY="128.0" prefHeight="35.0" prefWidth="117.0" text="Customer Name :">
+      <ComboBox fx:id="cmbCusId" layoutX="134.0" layoutY="133.0" onAction="#changeOnActionCusId" prefWidth="150.0" promptText="Select Customer ID" />
+      <Label layoutX="566.0" layoutY="128.0" prefHeight="35.0" prefWidth="117.0" text="Customer Name :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblCusName" layoutX="704.0" layoutY="136.0" prefHeight="20.0" prefWidth="48.0" text="Niroth" textFill="RED">
+      <Label fx:id="lblCusName" layoutX="683.0" layoutY="136.0" prefHeight="20.0" prefWidth="108.0" text="." textFill="RED">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -72,7 +72,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cmbItemCode" layoutX="36.0" layoutY="218.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbItemCode" layoutX="36.0" layoutY="218.0" onAction="#changeOnActionItemCode" prefWidth="150.0" promptText="Select Item Code" />
       <Label layoutX="202.0" layoutY="189.0" prefHeight="35.0" prefWidth="98.0" text="Description :">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -116,5 +116,10 @@
             <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="124.7999267578125" text="Total" />
         </columns>
       </TableView>
+      <Button layoutX="683.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnOnActionPlaceOrder" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #ebef0e;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
